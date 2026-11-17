@@ -83,6 +83,7 @@ Requires the .NET 8 SDK. The app icon is drawn by `tools/make_icon.py` (Pillow).
 
 - **Dorukhan Akar** ([@dorukhanakar](https://github.com/dorukhanakar)) — idea, design direction, testing on real hardware.
 - **Claude Opus 5.5** by [Anthropic](https://www.anthropic.com/) — co-developer: wrote the code together with Dorukhan in [Claude Code](https://claude.com/claude-code).
+- UI layout inspired by **[Xenon](https://github.com/marcimastro98/Xenon)** by Marcello Mastroeni.
 
 ### Contact
 
