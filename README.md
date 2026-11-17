@@ -90,6 +90,4 @@ Questions, ideas or feedback: **[dorukhanakar@gmail.com](mailto:dorukhanakar@gma
 
 ### License
 
-[PolyForm Noncommercial 1.0.0](LICENSE.md) — free to download, use, modify and share for **non-commercial** purposes. Commercial use (selling it, bundling it into a paid product, using it in a business) requires the author's permission — get in touch at [dorukhanakar@gmail.com](mailto:dorukhanakar@gmail.com).
-
-<sub>Required Notice: Copyright 2026 Dorukhan Akar (https://github.com/dorukhanakar/TouchScreenEdgePanel)</sub>
+[PolyForm Noncommercial 1.0.0](LICENSE.md) — free to download, use, modify and share for **non-commercial** purposes. Commercial use (selling it, bundling it into a paid product, using it in a business) requires the author's permission.
