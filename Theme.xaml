@@ -78,6 +78,15 @@
                         <Trigger Property="IsPressed" Value="True">
                             <Setter TargetName="b" Property="Opacity" Value="0.7"/>
                         </Trigger>
+                        <!-- tap feedback that is visible even for the shortest touch -->
+                        <EventTrigger RoutedEvent="ButtonBase.Click">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="b" Storyboard.TargetProperty="Opacity"
+                                                     From="0.5" To="1" Duration="0:0:0.25" FillBehavior="Stop"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
                         <Trigger Property="IsEnabled" Value="False">
                             <Setter TargetName="b" Property="Opacity" Value="0.4"/>
                         </Trigger>
@@ -120,6 +129,15 @@
                         <Trigger Property="IsPressed" Value="True">
                             <Setter TargetName="b" Property="Background" Value="#22FFFFFF"/>
                         </Trigger>
+                        <!-- tap feedback that is visible even for the shortest touch -->
+                        <EventTrigger RoutedEvent="ButtonBase.Click">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="b" Storyboard.TargetProperty="Opacity"
+                                                     From="0.35" To="1" Duration="0:0:0.25" FillBehavior="Stop"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
@@ -153,6 +171,15 @@
                             <Setter TargetName="b" Property="Background" Value="{StaticResource Accent}"/>
                             <Setter Property="Foreground" Value="{StaticResource OnAccent}"/>
                         </Trigger>
+                        <!-- tap feedback that is visible even for the shortest touch -->
+                        <EventTrigger RoutedEvent="ButtonBase.Click">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="b" Storyboard.TargetProperty="Opacity"
+                                                     From="0.55" To="1" Duration="0:0:0.25" FillBehavior="Stop"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
@@ -180,6 +207,15 @@
                             <Setter TargetName="b" Property="BorderBrush" Value="{StaticResource Accent}"/>
                             <Setter Property="Foreground" Value="{StaticResource OnAccent}"/>
                         </Trigger>
+                        <!-- tap feedback that is visible even for the shortest touch -->
+                        <EventTrigger RoutedEvent="ButtonBase.Click">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="b" Storyboard.TargetProperty="Opacity"
+                                                     From="0.55" To="1" Duration="0:0:0.25" FillBehavior="Stop"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
                         <Trigger Property="IsEnabled" Value="False">
                             <Setter TargetName="b" Property="Opacity" Value="0.4"/>
                         </Trigger>
@@ -202,6 +238,15 @@
                         <Trigger Property="IsPressed" Value="True">
                             <Setter TargetName="c" Property="Opacity" Value="0.6"/>
                         </Trigger>
+                        <!-- tap feedback that is visible even for the shortest touch -->
+                        <EventTrigger RoutedEvent="ButtonBase.Click">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="c" Storyboard.TargetProperty="Opacity"
+                                                     From="0.45" To="1" Duration="0:0:0.3" FillBehavior="Stop"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
@@ -217,18 +262,46 @@
                 <ControlTemplate TargetType="Button">
                     <Border x:Name="b" Background="#FF1C1D21" BorderBrush="#FF34363C" BorderThickness="1"
                             CornerRadius="12" RenderTransformOrigin="0.5,0.5">
+                        <Border.RenderTransform>
+                            <ScaleTransform/>
+                        </Border.RenderTransform>
                         <ContentPresenter HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsPressed" Value="True">
                             <Setter TargetName="b" Property="Background" Value="#FF26282D"/>
                             <Setter TargetName="b" Property="BorderBrush" Value="{StaticResource Accent}"/>
-                            <Setter TargetName="b" Property="RenderTransform">
-                                <Setter.Value>
-                                    <ScaleTransform ScaleX="0.96" ScaleY="0.96"/>
-                                </Setter.Value>
-                            </Setter>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="b" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)" To="0.93" Duration="0:0:0.06"/>
+                                        <DoubleAnimation Storyboard.TargetName="b" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)" To="0.93" Duration="0:0:0.06"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="b" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)" To="1" Duration="0:0:0.16"/>
+                                        <DoubleAnimation Storyboard.TargetName="b" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)" To="1" Duration="0:0:0.16"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
                         </Trigger>
+                        <!-- a quick tap releases before the press-in shows, so every tap also pops -->
+                        <EventTrigger RoutedEvent="ButtonBase.Click">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="b" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)" From="0.9" To="1" Duration="0:0:0.28">
+                                        <DoubleAnimation.EasingFunction><BackEase EasingMode="EaseOut" Amplitude="0.4"/></DoubleAnimation.EasingFunction>
+                                    </DoubleAnimation>
+                                    <DoubleAnimation Storyboard.TargetName="b" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)" From="0.9" To="1" Duration="0:0:0.28">
+                                        <DoubleAnimation.EasingFunction><BackEase EasingMode="EaseOut" Amplitude="0.4"/></DoubleAnimation.EasingFunction>
+                                    </DoubleAnimation>
+                                    <DoubleAnimation Storyboard.TargetName="b" Storyboard.TargetProperty="Opacity" From="0.6" To="1" Duration="0:0:0.28" FillBehavior="Stop"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>

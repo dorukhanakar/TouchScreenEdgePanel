@@ -6,7 +6,8 @@
         WindowStyle="None" ResizeMode="NoResize" ShowInTaskbar="False" ShowActivated="False"
         WindowStartupLocation="Manual" Left="0" Top="0"
         Background="#FF08090C" Foreground="{StaticResource Text1}" FontFamily="{StaticResource UiFont}"
-        UseLayoutRounding="True" SnapsToDevicePixels="True">
+        UseLayoutRounding="True" SnapsToDevicePixels="True"
+        Stylus.IsPressAndHoldEnabled="False" Stylus.IsFlicksEnabled="False" Stylus.IsTapFeedbackEnabled="False">
     <Grid>
         <!-- static ambient glow, drawn once -->
         <Rectangle>
