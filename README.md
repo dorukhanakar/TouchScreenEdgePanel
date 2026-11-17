@@ -85,6 +85,11 @@ Requires the .NET 8 SDK. The app icon is drawn by `tools/make_icon.py` (Pillow).
 - Weather and city search: [Open-Meteo](https://open-meteo.com/).
 - This project is not affiliated with or endorsed by Corsair, Discord or ESPN. "Discord" and the Discord logo are trademarks of Discord Inc.
 
+### Credits
+
+- **Dorukhan Akar** ([@dorukhanakar](https://github.com/dorukhanakar)) — idea, design direction, testing on real hardware.
+- **Claude Opus 5.5** by [Anthropic](https://www.anthropic.com/) — co-developer: wrote the code together with Dorukhan in [Claude Code](https://claude.com/claude-code).
+
 ### License
 
 [PolyForm Noncommercial 1.0.0](LICENSE.md) — free to download, use, modify and share for **non-commercial** purposes. Commercial use (selling it, bundling it into a paid product, using it in a business) requires the author's permission.
@@ -108,6 +113,8 @@ Requires the .NET 8 SDK. The app icon is drawn by `tools/make_icon.py` (Pillow).
 **Kurulum:** [Releases](https://github.com/dorukhanakar/TouchScreenEdgePanel/releases) sayfasından zip'i indir, bir klasöre çıkar, `TouchScreenEdgePanel.exe`'yi çalıştır. [.NET 8 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/8.0) gerekir. Ayarlar sağ üstteki ⚙ simgesinde; **Windows ile başlat** seçeneğini oradan açabilirsin.
 
 **Discord kurulumu (bir kez):** <https://discord.com/developers/applications> → **New Application** → **OAuth2** sayfasından Client ID ve Client Secret'ı kopyala, **Redirects** listesine `http://localhost` ekle → panelde ⚙ → Discord → yapıştır → **Kaydet ve bağlan** → Discord'da açılan pencerede **Yetkilendir**.
+
+**Emeği geçenler:** Dorukhan Akar ([@dorukhanakar](https://github.com/dorukhanakar)) — fikir, tasarım yönü ve gerçek donanımda testler; **Claude Opus 5.5** ([Anthropic](https://www.anthropic.com/)) — kodu Dorukhan'la birlikte [Claude Code](https://claude.com/claude-code) üzerinde yazan yardımcı geliştirici.
 
 **Lisans:** [PolyForm Noncommercial 1.0.0](LICENSE.md) — ticari olmayan her amaçla ücretsiz indirilebilir, kullanılabilir, değiştirilebilir ve paylaşılabilir. Ticari kullanım (satmak, ücretli bir ürüne eklemek, bir işletmede kullanmak) için yazarın izni gerekir.
 
