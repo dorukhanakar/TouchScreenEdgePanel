@@ -9,15 +9,9 @@
   Discord voice controls · live football scores · app launcher · clock &amp; weather — in one small process.
 </p>
 
-<p align="center">
-  <a href="#english">English</a> · <a href="#türkçe">Türkçe</a>
-</p>
-
 ![TouchScreenEdgePanel on a Xeneon Edge](docs/screenshot-en.png)
 
 ---
-
-## English
 
 ### Why
 
@@ -93,33 +87,5 @@ Requires the .NET 8 SDK. The app icon is drawn by `tools/make_icon.py` (Pillow).
 ### License
 
 [PolyForm Noncommercial 1.0.0](LICENSE.md) — free to download, use, modify and share for **non-commercial** purposes. Commercial use (selling it, bundling it into a paid product, using it in a business) requires the author's permission.
-
----
-
-## Türkçe
-
-![TouchScreenEdgePanel Türkçe arayüz](docs/screenshot-tr.png)
-
-**Corsair Xeneon Edge** (2560×720) dokunmatik ekranı için hafif, native bir Windows paneli: Discord ses kontrolleri, canlı futbol skorları, uygulama başlatıcı, saat ve hava durumu — tek bir küçük süreçte. Tarayıcı tabanlı panellerin yaklaşık 1 GB'ına karşılık ~70–160 MB bellek ve boştayken ~%0 CPU kullanır.
-
-**Özellikler**
-- **Discord:** sustur, sağırlaştır, bas-konuş / ses etkinliği, ayrıl, mikrofon ve çıkış sesi, gürültü engelleme vb., kanaldakiler (konuşan yeşil halkayla), sunucu ve ses kanalı seçimi; Discord kapalıysa **Discord'u Aç** butonu.
-- **Canlı skorlar:** 5 günlük akış (dün → +3 gün) ve her ligin içinde bulunduğu haftanın tamamı. Süper Lig, La Liga, Serie A, Bundesliga, Şampiyonlar Ligi, Avrupa Ligi, Konferans Ligi, Uluslar Ligi. Maça dokununca özeti tarayıcıda açılır.
-- **Uygulama başlatıcı:** Başlat menüsündeki tüm uygulamalar (Store uygulamaları dahil), exe/kısayol, klasör ve sistem öğeleri (Geri Dönüşüm Kutusu, Bu Bilgisayar…). Özel resim, düzenleme modunda sürükleyerek sıralama, ızgara kendini alana sığdırır.
-- **Saat, tarih ve hava durumu** (istediğin şehir).
-- **Türkçe ve İngilizce** arayüz (varsayılan olarak Windows'un dilini izler).
-- **Oyun dostu:** panele dokunmak oyundan odağı çalmaz.
-
-**Kurulum:** [Releases](https://github.com/dorukhanakar/TouchScreenEdgePanel/releases) sayfasından zip'i indir, bir klasöre çıkar, `TouchScreenEdgePanel.exe`'yi çalıştır. [.NET 8 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/8.0) gerekir. Ayarlar sağ üstteki ⚙ simgesinde; **Windows ile başlat** seçeneğini oradan açabilirsin.
-
-**Discord kurulumu (bir kez):** <https://discord.com/developers/applications> → **New Application** → **OAuth2** sayfasından Client ID ve Client Secret'ı kopyala, **Redirects** listesine `http://localhost` ekle → panelde ⚙ → Discord → yapıştır → **Kaydet ve bağlan** → Discord'da açılan pencerede **Yetkilendir**.
-
-**Emeği geçenler:** Dorukhan Akar ([@dorukhanakar](https://github.com/dorukhanakar)) — fikir, tasarım yönü ve gerçek donanımda testler; **Claude Opus 5.5** ([Anthropic](https://www.anthropic.com/)) — kodu Dorukhan'la birlikte [Claude Code](https://claude.com/claude-code) üzerinde yazan yardımcı geliştirici.
-
-**Lisans:** [PolyForm Noncommercial 1.0.0](LICENSE.md) — ticari olmayan her amaçla ücretsiz indirilebilir, kullanılabilir, değiştirilebilir ve paylaşılabilir. Ticari kullanım (satmak, ücretli bir ürüne eklemek, bir işletmede kullanmak) için yazarın izni gerekir.
-
-Corsair, Discord veya ESPN ile resmî bir bağlantısı yoktur.
-
----
 
 <sub>Required Notice: Copyright 2026 Dorukhan Akar (https://github.com/dorukhanakar/TouchScreenEdgePanel)</sub>
