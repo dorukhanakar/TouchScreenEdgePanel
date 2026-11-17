@@ -84,8 +84,12 @@ Requires the .NET 8 SDK. The app icon is drawn by `tools/make_icon.py` (Pillow).
 - **Dorukhan Akar** ([@dorukhanakar](https://github.com/dorukhanakar)) — idea, design direction, testing on real hardware.
 - **Claude Opus 5.5** by [Anthropic](https://www.anthropic.com/) — co-developer: wrote the code together with Dorukhan in [Claude Code](https://claude.com/claude-code).
 
+### Contact
+
+Questions, ideas or feedback: **[dorukhanakar@gmail.com](mailto:dorukhanakar@gmail.com)** — or open an [issue](https://github.com/dorukhanakar/TouchScreenEdgePanel/issues).
+
 ### License
 
-[PolyForm Noncommercial 1.0.0](LICENSE.md) — free to download, use, modify and share for **non-commercial** purposes. Commercial use (selling it, bundling it into a paid product, using it in a business) requires the author's permission.
+[PolyForm Noncommercial 1.0.0](LICENSE.md) — free to download, use, modify and share for **non-commercial** purposes. Commercial use (selling it, bundling it into a paid product, using it in a business) requires the author's permission — get in touch at [dorukhanakar@gmail.com](mailto:dorukhanakar@gmail.com).
 
 <sub>Required Notice: Copyright 2026 Dorukhan Akar (https://github.com/dorukhanakar/TouchScreenEdgePanel)</sub>
