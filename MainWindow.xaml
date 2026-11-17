@@ -1,0 +1,42 @@
+<Window x:Class="EdgePanel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:w="clr-namespace:EdgePanel.Widgets"
+        Title="TouchScreenEdgePanel" Width="2560" Height="720"
+        WindowStyle="None" ResizeMode="NoResize" ShowInTaskbar="False" ShowActivated="False"
+        WindowStartupLocation="Manual" Left="0" Top="0"
+        Background="#FF08090C" Foreground="{StaticResource Text1}" FontFamily="{StaticResource UiFont}"
+        UseLayoutRounding="True" SnapsToDevicePixels="True">
+    <Grid>
+        <!-- static ambient glow, drawn once -->
+        <Rectangle>
+            <Rectangle.Fill>
+                <RadialGradientBrush Center="0.12,1.05" GradientOrigin="0.12,1.05" RadiusX="0.45" RadiusY="1.3">
+                    <GradientStop Color="#3322C55E" Offset="0"/>
+                    <GradientStop Color="#0022C55E" Offset="1"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle>
+            <Rectangle.Fill>
+                <RadialGradientBrush Center="0.88,-0.1" GradientOrigin="0.88,-0.1" RadiusX="0.45" RadiusY="1.3">
+                    <GradientStop Color="#2E7C3AED" Offset="0"/>
+                    <GradientStop Color="#007C3AED" Offset="1"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Grid Margin="16">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="640*"/>
+                <ColumnDefinition Width="14"/>
+                <ColumnDefinition Width="560*"/>
+                <ColumnDefinition Width="14"/>
+                <ColumnDefinition Width="820*"/>
+            </Grid.ColumnDefinitions>
+            <w:DiscordWidget Grid.Column="0"/>
+            <w:ScoresWidget Grid.Column="2"/>
+            <w:AppsWidget Grid.Column="4"/>
+        </Grid>
+    </Grid>
+</Window>
