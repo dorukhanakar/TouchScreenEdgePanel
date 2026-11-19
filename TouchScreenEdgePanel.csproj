@@ -15,7 +15,7 @@
     <Authors>Dorukhan Akar</Authors>
     <Copyright>Copyright 2026 Dorukhan Akar</Copyright>
     <RootNamespace>EdgePanel</RootNamespace>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <!-- Low-footprint runtime settings -->
     <ServerGarbageCollector>false</ServerGarbageCollector>
     <ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
@@ -29,6 +29,13 @@
   <ItemGroup>
     <Using Include="System.Net.Http" />
     <Using Include="System.IO" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Use WPF's WM_POINTER touch stack instead of the legacy WISP one: touches are handled as pointer
+         input, so Windows no longer synthesizes mouse clicks for them and the cursor stays where it was
+         instead of jumping onto the touch screen (the same behaviour as browser-based panels). -->
+    <RuntimeHostConfigurationOption Include="Switch.System.Windows.Input.Stylus.EnablePointerSupport" Value="true" />
   </ItemGroup>
 
 </Project>

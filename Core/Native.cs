@@ -76,6 +76,25 @@ public static class Native
         w.Loaded += (_, _) => Place();             // after layout: exact centre with the real size
     }
 
+    // ── touch: cursor + feedback visuals ─────────────────────────
+    [StructLayout(LayoutKind.Sequential)] public struct POINT { public int X, Y; }
+    public const int PT_TOUCH = 2, PT_PEN = 3;
+    [DllImport("user32.dll")] public static extern bool GetPointerType(uint pointerId, out int pointerType);
+    [DllImport("user32.dll")] public static extern bool GetCursorPos(out POINT p);
+    [DllImport("user32.dll")] public static extern bool SetCursorPos(int x, int y);
+    [DllImport("user32.dll")] static extern bool SetWindowFeedbackSetting(IntPtr hwnd, int feedback, uint flags, uint size, ref int config);
+
+    /// <summary>Turns off Windows' touch/pen feedback visuals (contact trails, tap and press-and-hold circles) for one window.</summary>
+    public static void DisableTouchFeedbackVisuals(IntPtr hwnd)
+    {
+        // FEEDBACK_TOUCH_CONTACTVISUALIZATION (1) … FEEDBACK_GESTURE_PRESSANDTAP (11)
+        for (int feedback = 1; feedback <= 11; feedback++)
+        {
+            int off = 0;
+            try { SetWindowFeedbackSetting(hwnd, feedback, 0, sizeof(int), ref off); } catch { }
+        }
+    }
+
     // ── window placement / styles ────────────────────────────────
     public const uint SWP_NOZORDER = 0x0004, SWP_NOACTIVATE = 0x0010;
     [DllImport("user32.dll")] public static extern bool SetWindowPos(IntPtr h, IntPtr after, int x, int y, int cx, int cy, uint flags);
